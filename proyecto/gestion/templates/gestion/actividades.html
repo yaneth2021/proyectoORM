@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades</title>
+</head>
+<body>
+    <h1>Listado de Actividades</h1>
+    <ul>
+        {% for actividad in actividades %}
+            <li>
+                <strong>Nombre:</strong> {{ actividad.nombre }}<br>
+                <strong>Fecha de Inicio:</strong> {{ actividad.fecha_inicio }}<br>
+                <strong>Fecha de Fin:</strong> {{ actividad.fecha_fin|default:"Sin definir" }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
